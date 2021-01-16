@@ -64,6 +64,6 @@ app.use("/campgrounds", campgroundRoutes)
 app.use("/campgrounds/:id/comments", commentRoutes)
 
 // Listening to server
-app.listen("3000", () => {
+app.listen(process.env.PORT || 3000, () => {
 	console.log("Listening at port 3000")
 })
