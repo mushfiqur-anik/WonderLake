@@ -18,10 +18,12 @@ var campgroundRoutes = require("./routes/campgrounds"),
 
 console.log(process.env.DATABASEURL);
 
-var url = process.env.DATABASEURL || "mongodb://localhost:27017/wonder_lake_v12";
-
+// mongodb+srv://MushfiqurAnik:9h#WeO72@@myproject.nsrwn.mongodb.net/<dbname>?retryWrites=true&w=majority
 // Connecting to the database
-mongoose.connect(process.env.DATABASEURL, {
+// mongodb://localhost:27017/wonder_lake_v12
+
+var url = process.env.DATABASEURL || "mongodb://localhost:27017/wonder_lake_v12";
+mongoose.connect(url, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
