@@ -7,7 +7,6 @@ var bodyParser     = require("body-parser"),
 	LocalStrategy  = require("passport-local"),
 	methodOverride = require("method-override"),
 	flash          = require('connect-flash'),
-	//seedDB         = require("./seeds"),
 	mongoose       = require("mongoose"),
 	express        = require("express"),
 	app            = express()
@@ -17,9 +16,12 @@ var campgroundRoutes = require("./routes/campgrounds"),
 	commentRoutes = require("./routes/comments"),
 	indexRoutes = require("./routes/index")
 
-// mongodb+srv://MushfiqurAnik:9h#WeO72@@myproject.nsrwn.mongodb.net/<dbname>?retryWrites=true&w=majority
+console.log(process.env.DATABASEURL);
+
+var url = process.env.DATABASEURL || "mongodb://localhost:27017/wonder_lake_v12";
+
 // Connecting to the database
-mongoose.connect('mongodb+srv://MushfiqurAnik:tAMhKqTxn3CfurYF@myproject.nsrwn.mongodb.net/MyProject?retryWrites=true&w=majority', {
+mongoose.connect(url, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
