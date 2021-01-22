@@ -1,3 +1,29 @@
+.jumbotron {
+	padding-top:15px;
+	padding-bottom:15px;
+}
+
+#brand { 
+    font-family: 'Raleway', sans-serif;
+	font-weight:900;
+	padding-left: 10px;
+}
+
+#editBtn {
+	padding-top:2px;
+	padding-bottom: 2px;
+	padding-right: 23px;
+	padding-left:23px;
+}
+
+#deleteBtn {
+	margin-top:5px;
+	padding-top:3px;
+	padding-bottom: 3px;
+	padding-right: 15px;
+	padding-left:15px;
+}
+
 .thumbnail img {
 	width: 100%;
 }
@@ -12,4 +38,11 @@
 
 .delete-form {
 	display: inline;
+	
+}
+
+#container { 
+	padding-left: %;
+	margin-right: auto;
+    margin-left: auto;
 }
