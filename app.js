@@ -21,7 +21,7 @@ console.log(process.env.DATABASEURL);
 var url = process.env.DATABASEURL || "mongodb://localhost:27017/wonder_lake_v12";
 
 // Connecting to the database
-mongoose.connect(url, {
+mongoose.connect(process.env.DATABASEURL, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
